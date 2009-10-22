@@ -1,0 +1,112 @@
+body {
+  background-color: #000;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+  padding:0px; margin:0px;
+}
+
+a img {
+  border: none;
+}
+p{
+  font-size: 13px;
+  font-family:tahoma;
+}
+h3
+{
+  color: blue;
+  font-weight: normal;
+  font-family: tahoma;
+  font-size: 15px;
+  
+}
+a
+{
+  color: #555987;
+  text-decoration: none;
+}
+a:hover
+{
+  text-decoration: underline;
+  color: blue;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 65%;
+  margin: 20px auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: none 0px #333333;
+  margin-top: 0px;
+}
+
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+  font-size: 17px;
+  color: white;
+}
+
+#flash_notice {
+  background-color: blue;
+  border: solid 1px #fff;
+}
+
+#flash_error {
+  background-color: red;
+  border: solid 1px #fff;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+.footer
+{
+  text-align: center;
+}
+.authen
+{
+  text-align: right;
+}
+
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}

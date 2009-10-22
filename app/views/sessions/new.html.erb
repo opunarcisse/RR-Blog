@@ -1,0 +1,24 @@
+
+
+<% title "Login" %>
+
+
+<% form_for :session, :url =>{:action => "create"} do |f| %>
+
+<p>
+
+<%= f.label :email, " Email Address"%> <br />
+<%= f.text_field :email %>
+</p>
+<p>
+  
+  <%= f.label :password ,"Password" %>  <br />
+  <%=f.password_field :password %>
+  </p>
+<p>
+  
+  <%=f.submit "login"%>
+</p> 
+
+
+<% end %>

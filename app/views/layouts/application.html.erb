@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      
+      <div  class="authen">   
+      <% # here i check if the authentication was successul. This part is on the web pages. this is a global check point %>
+      <% if logged_in? %>
+      <%= link_to "logout", logout_path%>
+      <% else %>
+      <%= link_to "login", login_path unless controller_name == "sessions"%> 
+      <%end%>
+      </div>
+ 
+      
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+      
+      <%= yield %>
+      
+      
+      <p class="footer">  &copy Opu narcisse 2009 || RR Course at HH </p>
+      
+    </div>
+  </body>
+</html>

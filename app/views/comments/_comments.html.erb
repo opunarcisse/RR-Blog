@@ -1,0 +1,15 @@
+
+
+  <%= link_to 'create a new comment', new_post_comment_path(@post) %> 
+
+
+
+
+<% for comment in @comments do %>
+    <h2><%= link_to( comment.commenter, post_comment_path(:id => comment.id, :post_id => @post.id) )%></h2>
+    
+    <p> Created  <%= time_ago_in_words( comment.created_at) %> ago || Upadted  <%=  time_ago_in_words( comment.updated_at) %> </p>
+    <%= simple_format comment.body %>
+  <hr>  </hr>  
+
+<% end %>

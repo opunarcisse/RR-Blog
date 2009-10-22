@@ -1,0 +1,11 @@
+<% title "Comments for #{@post.title}" %>
+
+
+<p>
+  <h3> Comment from: 
+  <%=h @comment.commenter %>
+  </h3>
+</p>
+
+<%= simple_format(@comment.body) %>
+<%=  link_to "back to comments", @post %>

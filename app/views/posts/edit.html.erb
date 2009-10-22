@@ -1,0 +1,8 @@
+
+<% title "Editing post: #{@post.title}" %>
+
+
+<%= render :partial => "form", :locals => { :button_text => "Update"}%>
+
+<%= link_to 'Back to post', @post %> |
+<%= link_to 'All posts', posts_path %>

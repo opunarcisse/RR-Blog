@@ -1,0 +1,22 @@
+<% title "A new comment for #{@post.title}" %>
+
+<% form_for([@post, @comment]) do |f| %>
+
+<%= f.error_messages %>
+<p>
+   <%= f.label :Your_full_name %><br/> 
+  <%= f.text_field :commenter %>
+</p>
+
+<p>
+  <%= f.label :Body_of_Comment %> <br/> 
+  <%= f.text_area :body %>
+  </p>
+<p>
+  <%= f.submit "Add Comment" %>
+  </p>
+<%= link_to 'Back to comments', @post %>
+
+<% end %>
+
+

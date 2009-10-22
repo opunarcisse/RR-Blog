@@ -1,0 +1,31 @@
+<p>
+  <h2>    <% title " #{@post.title}" %>   </h2>
+ 
+</p>
+
+ <p> Created  <%=  time_ago_in_words( @post.created_at) %> ago || Upadted  <%=  time_ago_in_words( @post.updated_at) %> ago
+ 
+ </p>
+
+  <%= simple_format( @post.body) %>
+
+
+<% if logged_in? %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+
+<%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure you want to delete this post ?" %> |
+<% end%>
+
+<%= link_to 'All post', posts_path %> |
+
+
+<%= link_to "Total comments (#{@post.comments.count})", post_comments_path(@post) %>
+
+
+ <hr>  </hr> 
+
+
+
+
+<%= render :partial => "comments/comments" %>

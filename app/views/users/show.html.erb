@@ -1,0 +1,20 @@
+<% title "User" %>
+
+<p>
+  <strong>Email:</strong>
+  <%=h @user.email %>
+</p>
+<p>
+  <strong>Hashed Password:</strong>
+  <%=h @user.hashed_password %>
+</p>
+<p>
+  <strong>Salt:</strong>
+  <%=h @user.salt %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_user_path(@user) %> |
+  <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", users_path %>
+</p>
